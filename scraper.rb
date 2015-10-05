@@ -24,6 +24,5 @@ WikiData.ids_from_pages('en', names).each_with_index do |p, i|
     warn "No data for #{p}"
     next
   end
-  puts data
   ScraperWiki.save_sqlite([:id], data)
 end
